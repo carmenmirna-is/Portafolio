@@ -178,3 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+// 8. LOADER (se oculta solo cuando TODO terminó de cargar: imágenes, stats de GitHub, etc.)
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    if (!loader) return;
+
+    loader.classList.add('loader-hidden');
+    document.documentElement.classList.remove('is-loading');
+
+    // Quita el loader del DOM una vez termina la transición de opacidad
+    loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+});
