@@ -343,41 +343,8 @@ section { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; position: rel
 /* GitHub Stats Section */
 .github-stats-section { margin-top: 4rem; text-align: center; }
 .github-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
-.github-stats-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 1.5rem; 
-    margin-bottom: 1.5rem; 
-    align-items: stretch;
-}
-
-.stat-card-img {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 230px;
-    transition: var(--transition-smooth);
-}
-
-.stat-card-img:hover {
-    background: rgba(255,255,255,0.07);
-    border-color: var(--accent-sky);
-}
-
-.stat-card-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    object-fit: contain;
-}
-
-.stat-card-img:hover {
-    transform: scale(1.02);
-}
+.github-stats-grid img { width: 100%; border-radius: var(--radius-md); transition: var(--transition-smooth); }
+.github-stats-grid img:hover { transform: scale(1.02); }
 .contribution-graph { width: 100%; border-radius: var(--radius-md); }
 
 /* EDUCACIÓN, CERTIFICACIONES & IDIOMAS (Diseño Unificado) */
