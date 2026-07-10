@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmen Mirna Ibañez · Systems Engineer | Full Stack Developer</title>
+    <!-- SEO -->
+    <meta name="description" content="Portfolio de Carmen Mirna Ibañez, Ingeniera de Sistemas y Full Stack Developer especializada en Python, Django, PostgreSQL y optimización de procesos.">
+    <meta name="keywords" content="Ingeniera de Sistemas, Full Stack Developer, Python, Django, PostgreSQL, Portafolio, Bolivia, Carmen Ibañez, Optimización de Procesos, IA">
+    <meta name="author" content="Carmen Mirna Ibañez">
+    <!-- Open Graph (para compartir en redes) -->
+    <meta property="og:title" content="Carmen Mirna Ibañez · Portafolio Profesional">
+    <meta property="og:description" content="Ingeniera de Sistemas | Full Stack Developer | Process Optimization Enthusiast">
+    <meta property="og:image" content="link-a-tu-captura-de-pantalla.png"> <!-- Cambia esto -->
+    <meta property="og:url" content="https://tu-sitio.com"> <!-- Cambia esto -->
+    <meta property="og:type" content="website">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Iconos (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<nav id="navbar">
+    <span class="nav-logo">carmenmirna</span>
+    <div class="nav-right">
+        <div class="nav-links">
+            <a href="#hero" class="active">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto" class="nav-cta">Contacto</a>
+        </div>
+        <div class="top-controls">
+            <div class="language-switcher">
+                <button id="lang-es" class="active">🇪🇸 ES</button>
+                <button id="lang-en">🇺🇸 EN</button>
+            </div>
+            <button id="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO (La primera impresión) -->
+<section id="hero" class="hero-with-gradient">
+    <div class="hero-text">
+        <p class="hero-eyebrow">// Ingeniería de Sistemas · Trinidad, Bolivia</p>
+        <h1 class="hero-name">Carmen Mirna<br>Ibañez Sanguino</h1>
+        <p class="hero-title" data-en="Systems Engineer | Full Stack Developer | Process Optimization Enthusiast">Ingeniera de Sistemas | Full Stack Developer | Process Optimization Enthusiast</p>
+        <p class="hero-bio" data-en="Specialist in technical support, database administration and systems development. Oriented to continuous learning, teamwork and the constant improvement of institutional technological processes.">Especialista en soporte tecnológico, administración de bases de datos y desarrollo de sistemas. Orientada al aprendizaje continuo, el trabajo en equipo y la mejora constante de procesos tecnológicos institucionales.</p>
+
+        <!-- Badges de Tecnologías (2 segundos) -->
+        <div class="tech-badges">
+            <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-badge"><i class="fas fa-network-wired"></i> Django</span>
+            <span class="tech-badge"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="tech-badge"><i class="fab fa-docker"></i> Docker</span>
+            <span class="tech-badge"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tech-badge"><i class="fas fa-chart-line"></i> Power BI</span>
+            <span class="tech-badge"><i class="fas fa-table"></i> Excel</span>
+            <span class="tech-badge"><i class="fas fa-robot"></i> AI Tools</span>
+        </div>
+
+        <!-- Botones con Iconos -->
+        <div class="hero-actions">
+            <a href="#proyectos" class="btn-primary" data-en="View Projects"><i class="fas fa-eye"></i> Ver proyectos</a>
+            <a href="#certificaciones" class="btn-secondary" data-en="Download CV"><i class="fas fa-download"></i> Descargar CV</a>
+            <a href="https://github.com/carmenmirna-is" target="_blank" class="btn-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/carmen-mirna" target="_blank" class="btn-icon"><i class="fab fa-linkedin"></i></a> <!-- Agrega tu enlace -->
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div style="position:relative;">
+            <!-- Foto con Borde Degradado y Animación -->
+            <div class="hero-avatar hero-avatar-animated">
+                <img src="assets/img/carmenmirna.png" alt="Carmen Mirna Ibañez Sanguino"
+                    style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:var(--radius-lg);">
+            </div>
+            <!-- Estadísticas Visuales -->
+            <div class="hero-stats">
+                <div class="stat-pill">
+                    <i class="fas fa-graduation-cap"></i>
+                    <strong>2026</strong>
+                    <span data-en="Graduated">Titulada</span>
+                </div>
+                <div class="stat-pill">
+                    <i class="fas fa-globe"></i>
+                    <strong>B2</strong>
+                    <span data-en="English">Inglés</span>
+                </div>
+                <div class="stat-pill">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>BO</strong>
+                    <span data-en="Bolivia">Bolivia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MÉTRICAS ADICIONALES (Mucha más visual) -->
+<section id="metrics" class="reveal section-metrics">
+    <div class="metrics-grid">
+        <div class="metric-item">
+            <span class="metric-value"></span>
+            <span class="metric-label" data-en="Projects"></span>
+        </div>
+        <div class="metric-item">
+            <span class="metric-value">18</span>
+            <span class="metric-label" data-en="Technologies">Tecnologías</span>
+        </div>
+        <div class="metric-item">
+            <span class="metric-value">2</span>
+            <span class="metric-label" data-en="Languages">Idiomas</span>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE MÍ (Dividirlo) -->
+<section id="sobre-mi" class="reveal">
+    <p class="section-label" data-en="01 · About Me">01 · Sobre mí</p>
+    <h2 class="section-title" data-en="Who I Am">Quién soy</h2>
+    <div class="section-divider"></div>
+    <div class="sobre-grid">
+        <div class="sobre-text">
+            <h3 data-en="Who I Am">Quién soy</h3>
+            <p data-en="Systems engineer graduated from the 'José Ballivián' Autonomous University of Beni, with practical experience in academic systems development, database administration and institutional technological support.">Soy ingeniera de sistemas graduada de la Universidad Autónoma del Beni "José Ballivián", con experiencia práctica en desarrollo de sistemas académicos, administración de bases de datos y soporte tecnológico institucional.</p>
+            <p data-en="I am passionate about solving complex technical problems and optimizing processes through well-designed technological solutions. I work comfortably both autonomously and in multidisciplinary teams.">Me apasiona resolver problemas técnicos complejos y optimizar procesos a través de soluciones tecnológicas bien diseñadas. Trabajo cómodamente tanto de forma autónoma como en equipos multidisciplinarios.</p>
+            <p data-en="I am in an active stage of professional growth, looking for opportunities where I can contribute my technical knowledge and continue developing in the systems and software development area.">Estoy en una etapa activa de crecimiento profesional, buscando oportunidades donde pueda aportar mis conocimientos técnicos y seguir desarrollándome en el área de sistemas y desarrollo de software.</p>
+        </div>
+        <div class="sobre-highlights">
+            <h3 data-en="Quick Facts">Hechos Rápidos</h3>
+            <div class="highlight-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="highlight-info">
+                    <strong data-en="Location">Ubicación</strong>
+                    <span>Trinidad, Beni · Bolivia</span>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-language"></i>
+                <div class="highlight-info">
+                    <strong data-en="Languages">Idiomas</strong>
+                    <div class="language-bar-container">
+                        <span class="lang-tag" data-en="Spanish: Native">Español: Nativo</span>
+                        <div class="lang-bar" style="width: 100%;"></div>
+                    </div>
+                    <div class="language-bar-container">
+                        <span class="lang-tag" data-en="English: B2">Inglés: B2</span>
+                        <div class="lang-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-rocket"></i>
+                <div class="highlight-info">
+                    <strong data-en="Availability">Disponibilidad</strong>
+                    <span data-en="Immediate · Remote Ready">Inmediata · Preparada para Remoto</span>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-heart"></i>
+                <div class="highlight-info">
+                    <strong data-en="Interests">Intereses</strong>
+                    <span data-en="Process Optimization · Data Modeling">Optimización de Procesos · Modelado de Datos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HABILIDADES (Agruparlas en tarjetas y barras) -->
+<section id="habilidades" class="reveal">
+    <p class="section-label" data-en="02 · Technical Skills">02 · Habilidades técnicas</p>
+    <h2 class="section-title" data-en="My Stack">Mi stack</h2>
+    <div class="section-divider"></div>
+
+    <div class="skills-group-title" data-en="Backend & Frameworks">Backend & Frameworks</div>
+    <div class="skills-detailed-grid">
+        <div class="skill-detailed-card">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <h3>Python</h3>
+            <span class="skill-level" data-en="Advanced">Avanzado</span>
+            <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill-detailed-card">
+            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Django</h3>
+            <span class="skill-level" data-en="Intermediate">Intermedio</span>
+            <div class="skill-progress-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        </div>
+        <!-- Agrega más aquí -->
+    </div>
+
+    <div class="skills-group-title" data-en="Databases">Bases de datos</div>
+    <div class="skills-detailed-grid">
+        <div class="skill-detailed-card">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>PostgreSQL</h3>
+            <span class="skill-level" data-en="Advanced">Avanzado</span>
+            <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-detailed-card">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>SQL</h3>
+            <span class="skill-level" data-en="Advanced">Avanzado</span>
+            <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+    </div>
+
+    <!-- Agrega secciones para Frontend, Tools, etc. -->
+
+    <div class="skills-group-title" data-en="AI Tools">Herramientas de IA</div>
+    <div class="skills-detailed-grid ai-skills">
+        <div class="skill-detailed-card ai-card">
+            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+            <h3>ChatGPT / Claude</h3>
+            <span class="skill-level" data-en="Productivity">Productividad</span>
+        </div>
+        <div class="skill-detailed-card ai-card">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>GitHub Copilot</h3>
+            <span class="skill-level" data-en="Assisted Coding">Código Asistido</span>
+        </div>
+    </div>
+
+</section>
+
+<!-- EXPERIENCIA & TIMELINE -->
+<section id="experiencia" class="reveal">
+    <p class="section-label" data-en="03 · Experience">03 · Experiencia</p>
+    <h2 class="section-title" data-en="Trayectory">Trayectoria</h2>
+    <div class="section-divider"></div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">2025 - Present</div>
+            <div class="timeline-content">
+                <h3 class="timeline-role" data-en="Operations & IT Support Intern">Pasante en Operaciones y Soporte de TI</h3>
+                <p class="timeline-company">Instituto Tecnológico – UABJB · Trinidad, Bolivia</p>
+                <ul class="timeline-list">
+                    <li data-en="Development and maintenance of academic systems.">Desarrollo y mantenimiento de sistemas académicos.</li>
+                    <li data-en="Database administration (PostgreSQL).">Administración de bases de datos (PostgreSQL).</li>
+                    <li data-en="IT support and process optimization.">Soporte de TI y optimización de procesos.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-content">
+                <h3 class="timeline-role" data-en="Graduated Systems Engineer">Graduada Ingeniera de Sistemas</h3>
+                <p class="timeline-company">Universidad Autónoma del Beni "José Ballivián"</p>
+            </div>
+        </div>
+        <div class="timeline-item timeline-future">
+            <div class="timeline-date">Future</div>
+            <div class="timeline-content">
+                <h3 class="timeline-role" data-en="Looking for Remote Opportunities">Buscando Oportunidades Remotas</h3>
+                <p class="timeline-company" data-en="Open to connect.">Abierta a conectar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROYECTOS (El mayor cambio) -->
+<section id="proyectos" class="reveal">
+    <div class="inner">
+        <p class="section-label" data-en="04 · Projects">04 · Proyectos</p>
+        <h2 class="section-title" data-en="What I've Built">Lo que he construido</h2>
+        <div class="section-divider"></div>
+        <div class="projects-grid-detailed">
+
+            <!-- Proyecto 1 -->
+            <div class="project-detailed-card">
+                <div class="project-card-header">
+                    <span class="project-status completed" data-en="Completed">Completado</span>
+                    <span class="project-type academic" data-en="Academic Project">Proyecto Académico</span>
+                </div>
+                <!-- Galería de Capturas -->
+                <div class="project-gallery">
+                    <img src="assets/img/Login_Screenshot.png" alt="Index Screenshot">
+                    <img src="assets/img/D_Usuario.png" alt="Dashboard Screenshot" class="hidden">
+                    <img src="assets/img/Reportes_Encargado.png" alt="Reports Screenshot" class="hidden">
+                    <button class="gallery-zoom" aria-label="Ver imagen completa"><i class="fas fa-expand"></i></button>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="project-card-body">
+                    <h3 data-en="Institutional Academic System">Sistema académico institucional</h3>
+                    <p data-en="Full cycle development of a management system for the technological institute. Implemented features for student enrollment, grade tracking and reporting.">Desarrollo del ciclo completo de un sistema de gestión para el instituto tecnológico. Funciones implementadas para la inscripción de estudiantes, seguimiento de calificaciones e informes.</p>
+                    <div class="project-detailed-tags">
+                        <span class="p-tag">Python</span>
+                        <span class="p-tag">Django</span>
+                        <span class="p-tag">PostgreSQL</span>
+                        <span class="p-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="project-card-actions">
+                    <a href="https://github.com/carmenmirna-is" target="_blank" class="p-btn p-btn-github"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <!-- Puedes agregar más tarjetas aquí -->
+
+        </div>
+
+        <!-- GitHub Stats Section -->
+        <div class="github-stats-section reveal">
+            <h3 class="sub-section-title" data-en="GitHub Activity">Actividad en GitHub</h3>
+            <div class="github-stats-grid">
+                <img src="https://github-stats-extended.vercel.app/api?username=carmenmirna-is&show_icons=true&theme=vue-dark" alt="GitHub Stats" class="reveal">
+                <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=carmenmirna-is&layout=compact&theme=vue-dark" alt="Top Languages" class="reveal">
+            </div>
+            <img src="https://streak-stats.demolab.com/?user=carmenmirna-is&theme=vue-dark" alt="GitHub Streak" class="reveal contribution-graph">
+        </div>
+    </div>
+</section>
+
+<!-- EDUCACIÓN, CERTIFICACIONES & IDIOMAS -->
+<section id="educacion" class="reveal edu-cert-lang-section">
+    <div class="edu-column">
+        <p class="section-label" data-en="05 · Education">05 · Educación</p>
+        <h2 class="section-title" data-en="Formation">Formación</h2>
+        <div class="section-divider"></div>
+        <div class="edu-card card-style">
+            <span class="edu-badge" data-en="Bachelor's Degree">Pregrado</span>
+            <h3 data-en="Bachelor of Systems Engineering">Licenciatura en Ingeniería de Sistemas</h3>
+            <p class="edu-inst">Universidad Autónoma del Beni "José Ballivián"</p>
+            <p class="edu-year">Trinidad, Bolivia</p>
+        </div>
+        <!-- Actualmente Sección -->
+        <div class="currently-card card-style">
+            <span class="currently-badge" data-en="Currently">Actualmente</span>
+            <h3 data-en="Learning & Opportunities">Aprendiendo y Oportunidades</h3>
+            <ul class="currently-list">
+                <li><i class="fas fa-book"></i> Docker & REST APIs</li>
+                <li><i class="fas fa-book"></i> AWS Foundation</li>
+                <li><i class="fas fa-language"></i> English (C1 Goal)</li>
+                <li><i class="fas fa-search"></i> <strong data-en="Remote Job Seek">Búsqueda de Trabajo Remoto</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="certificaciones" class="cert-column">
+        <p class="section-label" data-en="06 · Certifications">06 · Certificaciones</p>
+        <h2 class="section-title" data-en="Certificates">Certificados</h2>
+        <div class="section-divider"></div>
+        <div class="certs-grid">
+            <div class="cert-card card-style">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div class="cert-info">
+                    <h3 data-en="English B2 Certificate">Certificado de Inglés B2</h3>
+                    <p class="cert-inst">EF SET</p>
+                    <p class="cert-year">2023</p>
+                </div>
+            </div>
+            <!-- Más certificaciones aquí -->
+        </div>
+
+        <!-- CV Sección -->
+        <div class="resume-section reveal">
+            <h3 class="sub-section-title" data-en="Resume / CV">Currículum / CV</h3>
+            <div class="resume-actions">
+                <a href="CV_Carmen_Ibanez_English.pdf" class="btn-secondary" data-en="Download EN"><i class="fas fa-file-download"></i> Versión Inglés</a>
+                <a href="CV_Carmen_Ibanez_Sanguino.pdf" class="btn-secondary" data-en="Download ES"><i class="fas fa-file-download"></i> Versión Español</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO (Tarjetas de contacto) -->
+<section id="contacto" class="reveal">
+    <p class="section-label" style="text-align:center;" data-en="07 · Contact">07 · Contacto</p>
+    <h2 class="section-title" style="text-align:center;" data-en="Let's Talk">Hablemos</h2>
+    <div class="section-divider" style="margin:1.25rem auto 2.5rem;"></div>
+    <p class="contact-intro" data-en="Interested in working together or have a question? I'd love to hear from you. Feel free to reach out via email, LinkedIn, or GitHub.">¿Interesado en trabajar juntos o tienes alguna pregunta? Me encantaría saber de ti. No dudes en contactarme por correo electrónico, LinkedIn o GitHub.</p>
+
+    <div class="contact-cards-new">
+        <a class="contact-card-new" href="mailto:cibanezsanguino@gmail.com">
+            <div class="contact-icon-new"><i class="fas fa-envelope"></i></div>
+            <div class="contact-text-new">
+                <strong data-en="Email">Correo</strong>
+                <span>cibanezsanguino@gmail.com</span>
+                <span class="contact-action-new" data-en="Send Message">Enviar Mensaje <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+        <a class="contact-card-new" href="https://www.linkedin.com/in/carmen-mirna" target="_blank"> <!-- Reemplaza tu perfil -->
+            <div class="contact-icon-new"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-text-new">
+                <strong>LinkedIn</strong>
+                <span>/in/carmen-mirna</span>
+                <span class="contact-action-new" data-en="Connect">Conectar <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+        <a class="contact-card-new" href="https://github.com/carmenmirna-is" target="_blank">
+            <div class="contact-icon-new"><i class="fab fa-github"></i></div>
+            <div class="contact-text-new">
+                <strong>GitHub</strong>
+                <span>/carmenmirna-is</span>
+                <span class="contact-action-new" data-en="View Repositories">Ver Repositorios <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+    </div>
+
+    <!-- CTA Final -->
+    <div class="final-cta reveal">
+        <p data-en="Interested in working together?">¿Interesado en trabajar juntos?</p>
+        <h3 data-en="Let's build something amazing.">Construyamos algo increíble.</h3>
+        <a href="mailto:cibanezsanguino@gmail.com" class="btn-primary" data-en="Contact Me">Contáctame</a>
+    </div>
+
+</section>
+
+<!-- Back to Top Botón -->
+<button id="back-to-top" title="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<footer id="footer">
+    <div class="footer-content">
+        <span class="footer-logo">carmenmirna</span>
+        <div class="footer-dev-info">
+            <p data-en="Designed & Developed by">Diseñado y Desarrollado por</p>
+            <p><strong>Carmen Mirna Ibañez</strong></p>
+            <p class="tech-stack">Made with HTML • CSS • JavaScript</p>
+        </div>
+        <div class="footer-social-links">
+            <a href="https://github.com/carmenmirna-is" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/carmen-mirna" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- Agrega tu enlace -->
+        </div>
+        <span class="copyright">© 2026 · Trinidad, Bolivia</span>
+    </div>
+</footer>
+
+<!-- Lightbox: muestra la imagen de la galería a tamaño completo -->
+<div id="lightbox" class="lightbox">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+    <img id="lightbox-img" src="" alt="Vista completa del proyecto">
+</div>
+
+<script src="static/js/script.js"></script>
+
+</body>
+</html>
