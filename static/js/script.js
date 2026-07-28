@@ -178,6 +178,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const closeBtn = document.querySelector('.modal-close');
+
+  // Permitir abrir al hacer clic en la imagen o en el botón .gallery-zoom
+  document.querySelectorAll('.project-gallery img, .gallery-zoom').forEach(element => {
+    element.style.cursor = 'pointer';
+    element.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // Si hizo clic en la imagen toma su src, si hizo clic en el botón toma la imagen de esa galería
+      const img = element.tagName === 'IMG' 
+        ? element 
+        : element.closest('.project-gallery').querySelector('img:not(.hidden)');
+      
+      if (img) {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      }
+    });
+  });
+
+  // Cerrar al dar clic en la 'X' o fuera de la imagen
+  const closeModal = () => { modal.style.display = 'none'; };
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Cerrar con tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+});
+
 // 8. LOADER (se oculta solo cuando TODO terminó de cargar: imágenes, stats de GitHub, etc.)
 window.addEventListener('load', () => {
     const loader = document.getElementById('page-loader');

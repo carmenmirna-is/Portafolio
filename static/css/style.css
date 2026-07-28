@@ -253,7 +253,20 @@ section { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; position: rel
 #proyectos .section-title { color: #fff; }
 #proyectos .section-divider { background: var(--accent-sky); }
 
-.projects-grid-detailed { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+/* Reemplaza o edita esta regla en tu CSS */
+.projects-grid-detailed {
+  display: grid;
+  /* Esto creará 2 columnas iguales en escritorio y adaptará en pantallas pequeñas */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 2rem; /* Espaciado entre tarjetas */
+  width: 100%;
+}
+
+/* Asegúrate de que las tarjetas ocupen el ancho de su celda */
+.project-detailed-card {
+  width: 100%;
+  box-sizing: border-box;
+}
 .project-detailed-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 0; transition: var(--transition-smooth); display: flex; flex-direction: column; overflow: hidden;}
 .project-detailed-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-3px); }
 
@@ -264,9 +277,16 @@ section { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; position: rel
 .project-type { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.5); }
 
 /* Galería de Capturas */
-.project-gallery { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #10141c; display: flex; align-items: center; justify-content: center; }
+.project-gallery { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: linear-gradient(160deg, #2a0f1a 0%, #10141c 100%); display: flex; align-items: center; justify-content: center; }
 .project-gallery img { width: 100%; height: 100%; object-fit: contain; object-position: center center; transition: opacity 0.5s ease;}
 .project-gallery img.hidden { opacity: 0; position: absolute; top: 0; left: 0; }
+.project-gallery img.portrait {
+    width: auto;
+    height: 90%;
+    max-width: 240px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
 .gallery-controls { position: absolute; bottom: 10px; right: 10px; display: flex; gap: 5px; z-index: 5;}
 .gallery-prev, .gallery-next { background: rgba(0,0,0,0.5); border: none; color: #fff; padding: 5px; border-radius: 50%; cursor: pointer; font-size: 10px; transition: var(--transition-smooth); opacity: 0;}
 .project-detailed-card:hover .gallery-prev, .project-detailed-card:hover .gallery-next { opacity: 1; }
@@ -519,6 +539,52 @@ html.is-loading body {
     background: var(--accent-sky);
     border-radius: 2px;
     animation: loader-bar-move 1.3s ease-in-out infinite;
+}
+
+/* Modal de Imagen Ampliada */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 2rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  animation: zoomIn 0.25s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #ccc;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 @keyframes loader-fade-in {
